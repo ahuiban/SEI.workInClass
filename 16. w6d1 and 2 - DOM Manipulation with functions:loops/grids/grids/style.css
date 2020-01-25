@@ -1,0 +1,23 @@
+.container {
+    width: 400px
+}
+
+.container2 {
+    margin-top: 100px;
+    width: 400px;
+}
+
+.redSquare {
+    height: 50px;
+    width: 50px;
+    border-radius: 0px;
+    display: inline-block;
+
+}
+
+.blackSquare {
+    height: 50px;
+    width: 50px;
+    border-radius: 0px;
+    display: inline-block;
+}

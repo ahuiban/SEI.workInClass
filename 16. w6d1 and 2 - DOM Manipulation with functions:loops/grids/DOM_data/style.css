@@ -1,0 +1,21 @@
+//Give the body a nicer font
+
+body {
+  font-family: Verdana;
+}
+//Give the info container some color, border, margin, padding
+
+.info-container {
+  background-color: azure;
+  border: 1px solid grey;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+//Last, give each name and address classes a display of inline-block, some margin, padding, and a border
+
+.name, .address {
+  border: 1px solid grey;
+  display: inline-block;
+  margin-right: 20px;
+  padding: 5px;
+}

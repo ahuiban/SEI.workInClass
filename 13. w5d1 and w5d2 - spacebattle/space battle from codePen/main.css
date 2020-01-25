@@ -1,0 +1,70 @@
+body {
+    background: url(https://vignette4.wikia.nocookie.net/starwars/images/6/65/Battle_of_Endor.png/revision/latest?cb=20121216165239);
+  }
+  
+  h1 {
+    color: rgb(178, 253,56);
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 50px;
+  }
+  
+  #score-box {
+    text-align: center;
+  }
+  
+  #button-box {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .top-buttons {
+    font-size: 15px;
+    font-family: 'Space Mono', monospace;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 5px 10px;
+  }
+  
+  .buttons {
+    font-size: 15px;
+    font-family: 'Space Mono', monospace;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition-duration: 0.5s;
+  }
+  
+  .buttons:hover {
+    color: white;
+    background-color: rgba(178, 253, 56, 0.75)
+  }
+  
+  #container {
+    position:relative;
+    top: 30px;
+    background-color: rgba(178, 253, 56, 0.75);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 250px;
+    border: 5px solid black;
+    /*border-radius: 20px;*/
+    overflow: auto;
+  }
+  
+  #game-text {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    color: white;
+    padding-top: 40px;
+    font-size: 20px;
+    color: black;
+  }
+  
+  
+  
+  
+  
+  
