@@ -1,0 +1,21 @@
+{
+  "name": "seir-flex-123",
+  "version": "1.0.0",
+  "description": "![ga](ga_cog.png) <br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/ira/SEIR-FLEX-123.git"
+  },
+  "keywords": [
+    "Andrei"
+  ],
+  "author": "Andrei",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
