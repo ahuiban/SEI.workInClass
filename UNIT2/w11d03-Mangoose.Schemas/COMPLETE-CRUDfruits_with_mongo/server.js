@@ -1,3 +1,11 @@
+/*
+To start:
+npm init
+npm i express ejs method-override mongoose
+nodemon
+*/
+
+
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
