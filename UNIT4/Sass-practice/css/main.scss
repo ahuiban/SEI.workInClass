@@ -1,0 +1,41 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: black;
+$input-bcolor: #58595b;
+$input-color: #fff;
+$calcd-bcolor: #a2af77;
+$calc-bcolor: #39383d;
+
+$height-weight: 75px;
+
+$null: none;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.calc {
+  width: 324px;
+  margin: auto;
+  background-color: $calc-bcolor;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.calc-display {
+  width: 100%;
+  height: $height-weight;
+  border: $null;
+  background-color: $calcd-bcolor;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+input[type="button"] {
+  width: $height-weight;
+  height: $height-weight;
+  margin: 2px;
+  color: $input-color;
+  border: $null;
+  border-radius: 8px;
+  background-color: $input-bcolor;
+}
