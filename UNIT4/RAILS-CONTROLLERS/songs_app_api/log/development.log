@@ -794,3 +794,282 @@ Processing by SongsController#show as HTML
 Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 4.6ms | Allocations: 3542)
 
 
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 14:06:20 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (6.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 6.8ms | ActiveRecord: 38.4ms | Allocations: 4854)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-04-25 14:06:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:08:17 -0400
+Processing by SongsController#show as */*
+  Parameters: {"review"=>"Loved it", "rating"=>4, "tour"=>"5c88fa8cf4afda39709c2951", "user"=>"5cd14baa326b861fab416f56", "id"=>"1", "song"=>{}}
+  [1m[36mSong Load (1.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:11:in `show'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2381)
+
+
+Started POST "/songs" for 127.0.0.1 at 2020-04-25 14:20:54 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started POST "/songs" for 127.0.0.1 at 2020-04-25 14:23:30 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:24:10 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 14:24:18 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:24:30 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started POST "/songs" for 127.0.0.1 at 2020-04-25 14:24:45 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 127.0.0.1 at 2020-04-25 14:26:18 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 315)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 14:26:26 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:26:42 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+app/controllers/songs_controller.rb:31: syntax error, unexpected end-of-input, expecting end
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:27:27 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:32: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/songs_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+app/controllers/songs_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:27:28 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:32: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/songs_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+app/controllers/songs_controller.rb:32: syntax error, unexpected end, expecting end-of-input
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 14:30:01 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:11:in `show'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 7.3ms | Allocations: 4297)
+
+
+Started POST "/songs" for 127.0.0.1 at 2020-04-25 14:31:33 -0400
+Processing by SongsController#create as */*
+  Parameters: {"song"=>{"title"=>"Fav Song", "artist_name"=>"Andrei", "artwork"=>"None"}}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:18:in `create'
+  [1m[36mSong Create (9.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist_name", "artwork") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Fav Song"], ["artist_name", "Andrei"], ["artwork", "None"]]
+  ↳ app/controllers/songs_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:18:in `create'
+Completed 201 Created in 17ms (Views: 0.4ms | ActiveRecord: 13.0ms | Allocations: 2380)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 14:37:24 -0400
+Processing by SongsController#index as */*
+  Parameters: {"song"=>{"title"=>"Fav Song", "artist_name"=>"Andrei", "artwork"=>"None"}}
+  [1m[36mSong Load (4.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 11.6ms | ActiveRecord: 4.1ms | Allocations: 4549)
+
+
+Started POST "/songs" for 127.0.0.1 at 2020-04-25 14:39:03 -0400
+Processing by SongsController#create as */*
+  Parameters: {"song"=>{"title"=>"Fav Song 5", "artist_name"=>"Andrei_test", "artwork"=>"None"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:18:in `create'
+  [1m[36mSong Create (1.1ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist_name", "artwork") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Fav Song 5"], ["artist_name", "Andrei_test"], ["artwork", "None"]]
+  ↳ app/controllers/songs_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:18:in `create'
+Completed 201 Created in 9ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2253)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-25 15:16:24 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.2ms | Allocations: 315)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/books" for 127.0.0.1 at 2020-04-25 15:16:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:16:36 -0400
+  
+SyntaxError (/Users/andrei/Desktop/seir.flex.Andrei.Huiban/SEI.workInClass/UNIT4/RAILS-CONTROLLERS/songs_app_api/app/controllers/songs_controller.rb:37: syntax error, unexpected end, expecting end-of-input
+    end
+    ^~~):
+  
+app/controllers/songs_controller.rb:37: syntax error, unexpected end, expecting end-of-input
+app/controllers/songs_controller.rb:37: syntax error, unexpected end, expecting end-of-input
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:16:49 -0400
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 9.0ms | Allocations: 5145)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:20:10 -0400
+Processing by SongsController#index as */*
+  Parameters: {"book"=>{"title"=>"temp1", "author"=>"Andrei_test", "genre"=>"genre test", "publisher"=>"publisher test", "publisher_date"=>"2020-02-18"}}
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 6.2ms | Allocations: 4757)
+
+
+Started DELETE "/songs/1" for 127.0.0.1 at 2020-04-25 15:20:32 -0400
+Processing by SongsController#destroy as */*
+  Parameters: {"book"=>{"title"=>"temp1", "author"=>"Andrei_test", "genre"=>"genre test", "publisher"=>"publisher test", "publisher_date"=>"2020-02-18"}, "id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:32:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:32:in `destroy'
+  [1m[36mSong Destroy (5.7ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/songs_controller.rb:32:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:32:in `destroy'
+Completed 204 No Content in 13ms (Views: 0.2ms | ActiveRecord: 7.4ms | Allocations: 2742)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2020-04-25 15:20:46 -0400
+Processing by SongsController#show as */*
+  Parameters: {"book"=>{"title"=>"temp1", "author"=>"Andrei_test", "genre"=>"genre test", "publisher"=>"publisher test", "publisher_date"=>"2020-02-18"}, "id"=>"1"}
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:11:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 1.1ms | Allocations: 629)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Song with 'id'=1):
+  
+app/controllers/songs_controller.rb:11:in `show'
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:20:52 -0400
+Processing by SongsController#index as */*
+  Parameters: {"book"=>{"title"=>"temp1", "author"=>"Andrei_test", "genre"=>"genre test", "publisher"=>"publisher test", "publisher_date"=>"2020-02-18"}}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1842)
+
+
+Started PUT "/songs/3" for 127.0.0.1 at 2020-04-25 15:23:45 -0400
+Processing by SongsController#update as */*
+  Parameters: {"title"=>"Semiotics pabst schlitz chia hashtag marfa.", "artist_name"=>"Andrei's Song", "artwork"=>"https://placehold.it/300x300.png", "id"=>"3", "song"=>{"title"=>"Semiotics pabst schlitz chia hashtag marfa.", "artist_name"=>"Andrei's Song", "artwork"=>"https://placehold.it/300x300.png"}}
+  [1m[36mSong Load (2.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:26:in `update'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:27:in `update'
+  [1m[36mSong Update (7.1ms)[0m  [1m[33mUPDATE "songs" SET "artist_name" = $1 WHERE "songs"."id" = $2[0m  [["artist_name", "Andrei's Song"], ["id", 3]]
+  ↳ app/controllers/songs_controller.rb:27:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:27:in `update'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 11.6ms | Allocations: 2954)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:23:53 -0400
+Processing by SongsController#index as */*
+  Parameters: {"title"=>"Semiotics pabst schlitz chia hashtag marfa.", "artist_name"=>"Andrei's Song", "artwork"=>"https://placehold.it/300x300.png", "song"=>{"title"=>"Semiotics pabst schlitz chia hashtag marfa.", "artist_name"=>"Andrei's Song", "artwork"=>"https://placehold.it/300x300.png"}}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1827)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:24:18 -0400
+Processing by SongsController#index as */*
+  Parameters: {"song"=>{}}
+  [1m[36mSong Load (8.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 8.8ms | Allocations: 1828)
+
+
+Started GET "/songs" for 127.0.0.1 at 2020-04-25 15:24:19 -0400
+Processing by SongsController#index as */*
+  Parameters: {"song"=>{}}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1827)
+
+
