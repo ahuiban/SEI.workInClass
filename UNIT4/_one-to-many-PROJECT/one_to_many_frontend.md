@@ -15,21 +15,22 @@ Now, let's make the front-end for our Temperatures app.
 
 ### OUR GOAL IS TO:
 
-* Interact with our Rails API
-* Display all of a single location's **average high temperatures** on a chart.
+- Interact with our Rails API
+- Display all of a single location's **average high temperatures** on a chart.
 
 ### Lesson objectives
 
 At the end of this lesson, students will be able to:
 
-* Use **fetch** for AJAX requests
-* Configure CORS
-* Make a line graph with `Chart.js`
+- Use **fetch** for AJAX requests
+- Configure CORS
+- Make a line graph with `Chart.js`
 
 This is the final product we're shooting for:
 
 **Temperatures for Location 1**
 ![](https://i.imgur.com/OC4GolP.png)
+
 ---
 
 # SETUP
@@ -37,13 +38,14 @@ This is the final product we're shooting for:
 Make our Frontend server.
 
 In the top-level `temperatures`
-- `create-react-app temperatures_client`
+
+- `npx create-react-app temperatures_client`
 - `cd temperatures_client`
 - `touch .env`
-    - insisde `.env` type `PORT=3001` (set default port to always be 3001, since rails default port is 3000 - notice: no spaces, no quotes, port is all caps)
-    - ![](https://i.imgur.com/9sgKZDq.png)
+  - insisde `.env` type `PORT=3001` (set default port to always be 3001, since rails default port is 3000 - notice: no spaces, no quotes, port is all caps)
+  - ![](https://i.imgur.com/9sgKZDq.png)
 - in `package.json` set `proxy` to be `http://localhost:3000`
-    - ![](https://i.imgur.com/f6o4zfB.png)
+  - ![](https://i.imgur.com/f6o4zfB.png)
 - install chart.js
   - `npm install chart.js`
   - `mkdir src/components`
@@ -54,21 +56,21 @@ In the top-level `temperatures`
 **BarChart.js**
 
 ```js
-import React, { Component } from 'react';
-import Chart from 'chart.js'
+import React, { Component } from "react";
+import Chart from "chart.js";
 
 class BarChart extends Component {
-  render () {
+  render() {
     return (
       <>
         <h1>Temperatures</h1>
         <canvas id="temperatures" width="300" height="100"></canvas>
       </>
-    )
+    );
   }
 }
 
-export default BarChart
+export default BarChart;
 ```
 
 <!--SEI1 5:03 -->
@@ -76,9 +78,9 @@ export default BarChart
 **App.js**
 
 ```js
-import React, { Component } from 'react';
-import BarChart from './components/BarChart.js'
-import './App.css';
+import React, { Component } from "react";
+import BarChart from "./components/BarChart.js";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -105,10 +107,10 @@ Make an AJAX request to get locations in `App.js`:
 
 ```javascript
 componentDidMount() {
-  fetch('/locations')                                        
-    .then(response => response.json())                                            
-    .then(json => console.log(json))                                              
-    .catch(err => console.log(err))  
+  fetch('/locations')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err))
 }
 ```
 
@@ -140,7 +142,7 @@ Allow all origins in `config/initializers/cors.rb`
 
 **Restart the Rails server.**
 
->**Note:** When you deploy your projects to production, make sure you are not allowing all origins as we are above.  You should only allow traffic from your local server and your production front-end (e.g. GitHub Pages).
+> **Note:** When you deploy your projects to production, make sure you are not allowing all origins as we are above. You should only allow traffic from your local server and your production front-end (e.g. GitHub Pages).
 
 <br>
 
@@ -194,52 +196,52 @@ We'll want to prepare our data. Currently our data isn't arranged to go into our
 
 Our data object at minimum should have two arrays:
 
-* labels - for the x axis
-* datasets - for the y axis
+- labels - for the x axis
+- datasets - for the y axis
 
 ```js
 getData = () => {
-  fetch('/locations/1')
-    .then(response => response.json())
-    .then(json => this.prepareData(json))
-    .catch(err => console.log(err))
-}
+  fetch("/locations/1")
+    .then((response) => response.json())
+    .then((json) => this.prepareData(json))
+    .catch((err) => console.log(err));
+};
 prepareData = (data) => {
-	const chartData = {
-		labels: [],
-		datasets: [
-			{
-				label: 'Avg high temps',
-				data: []
-			}
-		]
-	}
+  const chartData = {
+    labels: [],
+    datasets: [
+      {
+        label: "Avg high temps",
+        data: [],
+      },
+    ],
+  };
 
-	data.temperatures.forEach(temperature => {
-		chartData.labels.push(temperature.month)
-		chartData.datasets[0].data.push(temperature.average_high_f)
-	})
-	return chartData
-}
+  data.temperatures.forEach((temperature) => {
+    chartData.labels.push(temperature.month);
+    chartData.datasets[0].data.push(temperature.average_high_f);
+  });
+  return chartData;
+};
 ```
 
-* Instantiate a new Chart object. The Chart constructor takes the canvas context and an options object as arguments.
+- Instantiate a new Chart object. The Chart constructor takes the canvas context and an options object as arguments.
 
 ```js
 getData = () => {
-  fetch('/locations/1')
-    .then(response => response.json())
-    .then(jData => this.prepareData(jData))
-    .then(data => this.createChart(data))
-  }
+  fetch("/locations/1")
+    .then((response) => response.json())
+    .then((jData) => this.prepareData(jData))
+    .then((data) => this.createChart(data));
+};
 // ...further down ...
 createChart = (data) => {
-	const ctx = document.querySelector('#temperatures')
-	const tempsChart = new Chart(ctx, {
-		type: 'line',
-		data: data
-			})
-}
+  const ctx = document.querySelector("#temperatures");
+  const tempsChart = new Chart(ctx, {
+    type: "line",
+    data: data,
+  });
+};
 ```
 
 If it's working, we should see something like the chart below:
@@ -249,59 +251,58 @@ If it's working, we should see something like the chart below:
 All the code:
 
 ```js
-import React, { Component } from 'react';
-import Chart from 'chart.js'
+import React, { Component } from "react";
+import Chart from "chart.js";
 
 class BarChart extends Component {
-
-  componentDidMount () {
-     this.getData()
+  componentDidMount() {
+    this.getData();
   }
   getData = () => {
-    fetch('/locations/1')
-      .then(response => response.json())
-      .then(jData => this.prepareData(jData))
-      .then(data => this.createChart(data))
-  }
+    fetch("/locations/1")
+      .then((response) => response.json())
+      .then((jData) => this.prepareData(jData))
+      .then((data) => this.createChart(data));
+  };
   prepareData = (data) => {
     const chartData = {
-        labels: [],
-        datasets: [
-            {
-                label: 'Avg high temps',
-                data: []
-            },
-            {
-              label: 'Avg low temps',
-              data:[]
-            }
-        ]
-    }
+      labels: [],
+      datasets: [
+        {
+          label: "Avg high temps",
+          data: [],
+        },
+        {
+          label: "Avg low temps",
+          data: [],
+        },
+      ],
+    };
 
-    data.temperatures.forEach(temperature => {
-        chartData.labels.push(temperature.month)
-        chartData.datasets[0].data.push(temperature.average_high_f)
-    })
-    return chartData
-  }
+    data.temperatures.forEach((temperature) => {
+      chartData.labels.push(temperature.month);
+      chartData.datasets[0].data.push(temperature.average_high_f);
+    });
+    return chartData;
+  };
   createChart = (data) => {
-      const ctx = document.querySelector('#temperatures')
-      new Chart(ctx, {
-          type: 'line',
-          data: data,
-      })
-  }
-  render () {
+    const ctx = document.querySelector("#temperatures");
+    new Chart(ctx, {
+      type: "line",
+      data: data,
+    });
+  };
+  render() {
     return (
       <>
         <h1>Temperatures</h1>
         <canvas id="temperatures" width="300" height="100"></canvas>
       </>
-    )
+    );
   }
 }
 
-export default BarChart
+export default BarChart;
 ```
 
 <!--SEI1 5:48 -->
@@ -312,29 +313,29 @@ Add in a second dataset for `Avg low temps`.
 We'll push in the `average_low_f` data.
 
 ```javascript
-  const chartData = {
-  	labels: [],
-  	datasets: [
-  		{
-  			label: 'Avg high temps',
-  			data: []
-  		},
-  		{
-  			label: 'Avg low temps',
-  			data: []
-  		}
-  	]
-  };
+const chartData = {
+  labels: [],
+  datasets: [
+    {
+      label: "Avg high temps",
+      data: [],
+    },
+    {
+      label: "Avg low temps",
+      data: [],
+    },
+  ],
+};
 ```
 
 Push in the low temps:
 
 ```javascript
-  json.temperatures.forEach((temperature) => {
-    chartData.labels.push(temperature.month);
-    chartData.datasets[0].data.push(temperature.average_high_f);
-    chartData.datasets[1].data.push(temperature.average_low_f);
-  });
+json.temperatures.forEach((temperature) => {
+  chartData.labels.push(temperature.month);
+  chartData.datasets[0].data.push(temperature.average_high_f);
+  chartData.datasets[1].data.push(temperature.average_low_f);
+});
 ```
 
 Possible Result:
@@ -425,7 +426,6 @@ const chartData = {
 }
 ```
 
-
 <br>
 <hr>
 
@@ -436,12 +436,12 @@ const chartData = {
 
 ## Other things our app could do:
 
-* show all of a location's data on a single chart
-* have separate charts for each dataset
-* display the location in Google Maps using lat and lng
-* have an index of selectable locations
-* use React Router to tab between charts
-* use React Router to tab between locations
+- show all of a location's data on a single chart
+- have separate charts for each dataset
+- display the location in Google Maps using lat and lng
+- have an index of selectable locations
+- use React Router to tab between charts
+- use React Router to tab between locations
 
 <br>
 <hr>
