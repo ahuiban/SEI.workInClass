@@ -1,0 +1,146 @@
+  [1m[35m (179.4ms)[0m  [1m[35mCREATE DATABASE "temperatures_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (80.2ms)[0m  [1m[35mCREATE DATABASE "temperatures_api_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2020-05-02 10:16:44 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 478)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 2621)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-05-02 10:16:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-05-02 10:16:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(164586408472616235)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLocations (20200502142536)
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "lat" decimal, "lng" decimal, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200502142536"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTemperatures (20200502142710)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "temperatures" ("id" bigserial primary key, "average_high_f" integer, "average_low_f" integer, "month" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200502142710"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeyToTemperatures (20200502143237)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "temperatures" ADD "location_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200502143237"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-02 14:36:41.667382"], ["updated_at", "2020-05-02 14:36:41.667382"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(164586408472616235)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (2.4ms)[0m  [1m[32mINSERT INTO "locations" ("lat", "lng", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["lat", "40.7128"], ["lng", "74.0059"], ["name", "New York City"], ["created_at", "2020-05-02 14:53:12.328495"], ["updated_at", "2020-05-02 14:53:12.328495"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("lat", "lng", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["lat", "78.2232"], ["lng", "15.6267"], ["name", "LongYearByen"], ["created_at", "2020-05-02 14:53:12.334442"], ["updated_at", "2020-05-02 14:53:12.334442"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.9ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 39], ["average_low_f", 26], ["month", "January"], ["created_at", "2020-05-02 14:53:12.367365"], ["updated_at", "2020-05-02 14:53:12.367365"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 42], ["average_low_f", 29], ["month", "February"], ["created_at", "2020-05-02 14:53:12.372465"], ["updated_at", "2020-05-02 14:53:12.372465"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.2ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 50], ["average_low_f", 35], ["month", "March"], ["created_at", "2020-05-02 14:53:12.376704"], ["updated_at", "2020-05-02 14:53:12.376704"], ["location_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.2ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 61], ["average_low_f", 45], ["month", "April"], ["created_at", "2020-05-02 14:53:12.380778"], ["updated_at", "2020-05-02 14:53:12.380778"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 71], ["average_low_f", 54], ["month", "May"], ["created_at", "2020-05-02 14:53:12.384637"], ["updated_at", "2020-05-02 14:53:12.384637"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.5ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 79], ["average_low_f", 64], ["month", "June"], ["created_at", "2020-05-02 14:53:12.389073"], ["updated_at", "2020-05-02 14:53:12.389073"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 84], ["average_low_f", 69], ["month", "July"], ["created_at", "2020-05-02 14:53:12.393498"], ["updated_at", "2020-05-02 14:53:12.393498"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 83], ["average_low_f", 68], ["month", "August"], ["created_at", "2020-05-02 14:53:12.406965"], ["updated_at", "2020-05-02 14:53:12.406965"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 75], ["average_low_f", 61], ["month", "September"], ["created_at", "2020-05-02 14:53:12.411300"], ["updated_at", "2020-05-02 14:53:12.411300"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 64], ["average_low_f", 50], ["month", "October"], ["created_at", "2020-05-02 14:53:12.415538"], ["updated_at", "2020-05-02 14:53:12.415538"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 54], ["average_low_f", 42], ["month", "November"], ["created_at", "2020-05-02 14:53:12.419936"], ["updated_at", "2020-05-02 14:53:12.419936"], ["location_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.3ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", 43], ["average_low_f", 48], ["month", "December"], ["created_at", "2020-05-02 14:53:12.424094"], ["updated_at", "2020-05-02 14:53:12.424094"], ["location_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTemperature Create (0.2ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", -6], ["average_low_f", -12], ["month", "January"], ["created_at", "2020-05-02 14:53:12.427892"], ["updated_at", "2020-05-02 14:53:12.427892"], ["location_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "temperatures"[0m
