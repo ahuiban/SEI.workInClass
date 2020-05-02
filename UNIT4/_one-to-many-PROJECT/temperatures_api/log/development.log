@@ -186,3 +186,109 @@ Processing by LocationsController#show as HTML
 Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 8.4ms | Allocations: 15950)
 
 
+Started POST "/locations/2/temperatures" for 127.0.0.1 at 2020-05-02 12:19:01 -0400
+Processing by TemperaturesController#create as */*
+  Parameters: {"temperature"=>{"average_high_f"=>"-8", "average_low_f"=>"-13"}, "temperatrure"=>{"month"=>"February"}, "location_id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[36mTemperature Create (3.0ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["average_high_f", -8], ["average_low_f", -13], ["created_at", "2020-05-02 16:19:01.477437"], ["updated_at", "2020-05-02 16:19:01.477437"], ["location_id", 2]]
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 5.0ms | Allocations: 47805)
+
+
+  
+NoMethodError (undefined method `temperature_url' for #<TemperaturesController:0x00007f8f753def30>
+Did you mean?  temperatures_url):
+  
+app/controllers/temperatures_controller.rb:13:in `create'
+Started POST "/locations/2/temperatures" for 127.0.0.1 at 2020-05-02 12:22:18 -0400
+Processing by TemperaturesController#create as */*
+  Parameters: {"temperature"=>{"average_high_f"=>"-8", "average_low_f"=>"-13"}, "temperatrure"=>{"month"=>"February"}, "location_id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[36mTemperature Create (0.4ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["average_high_f", -8], ["average_low_f", -13], ["created_at", "2020-05-02 16:22:18.726130"], ["updated_at", "2020-05-02 16:22:18.726130"], ["location_id", 2]]
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+Completed 201 Created in 41ms (Views: 0.3ms | ActiveRecord: 14.0ms | Allocations: 12761)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2020-05-02 12:22:43 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `show'
+  [1m[36mTemperature Load (0.3ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."location_id" = $1[0m  [["location_id", 1]]
+  ↳ app/controllers/locations_controller.rb:10:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3355)
+
+
+Started GET "/locations/1" for 127.0.0.1 at 2020-05-02 12:23:11 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `show'
+  [1m[36mTemperature Load (0.3ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."location_id" = $1[0m  [["location_id", 1]]
+  ↳ app/controllers/locations_controller.rb:10:in `show'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3007)
+
+
+Started GET "/locations/2" for 127.0.0.1 at 2020-05-02 12:23:18 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `show'
+  [1m[36mTemperature Load (0.4ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."location_id" = $1[0m  [["location_id", 2]]
+  ↳ app/controllers/locations_controller.rb:10:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1826)
+
+
+Started POST "/locations/2/temperatures" for 127.0.0.1 at 2020-05-02 12:25:52 -0400
+Processing by TemperaturesController#create as */*
+  Parameters: {"temperature"=>{"average_high_f"=>"-8", "average_low_f"=>"-13", "month"=>"February"}, "location_id"=>"2"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[36mTemperature Create (0.4ms)[0m  [1m[32mINSERT INTO "temperatures" ("average_high_f", "average_low_f", "month", "created_at", "updated_at", "location_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["average_high_f", -8], ["average_low_f", -13], ["month", "February"], ["created_at", "2020-05-02 16:25:52.757920"], ["updated_at", "2020-05-02 16:25:52.757920"], ["location_id", 2]]
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/temperatures_controller.rb:12:in `create'
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 3430)
+
+
+Started GET "/locations/2" for 127.0.0.1 at 2020-05-02 12:26:02 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `show'
+  [1m[36mTemperature Load (0.3ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."location_id" = $1[0m  [["location_id", 2]]
+  ↳ app/controllers/locations_controller.rb:10:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1957)
+
+
+  [1m[36mTemperature Load (0.4ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTemperature Destroy (2.2ms)[0m  [1m[31mDELETE FROM "temperatures" WHERE "temperatures"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTemperature Load (0.6ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTemperature Destroy (0.4ms)[0m  [1m[31mDELETE FROM "temperatures" WHERE "temperatures"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/locations/2" for 127.0.0.1 at 2020-05-02 12:30:33 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `show'
+  [1m[36mTemperature Load (0.4ms)[0m  [1m[34mSELECT "temperatures".* FROM "temperatures" WHERE "temperatures"."location_id" = $1[0m  [["location_id", 2]]
+  ↳ app/controllers/locations_controller.rb:10:in `show'
+Completed 200 OK in 54ms (Views: 0.2ms | ActiveRecord: 10.5ms | Allocations: 14468)
+
+

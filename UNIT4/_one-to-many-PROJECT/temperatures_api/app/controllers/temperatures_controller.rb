@@ -7,8 +7,10 @@ class TemperaturesController < ApplicationController
   # POST /temperatures
   def create
     @temperature = Temperature.new(temperature_params)
+    @temperature.location_id = params[:location_id]
+
     if @temperature.save
-      render json: @temperature, status: :created, location: @temperature
+      render json: @temperature, status: :created
     else
       render json: @temperature.errors, status: :unprocessable_entity
     end
