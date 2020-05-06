@@ -1,0 +1,91 @@
+  [1m[35m (172.0ms)[0m  [1m[35mCREATE DATABASE "playlist_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (75.1ms)[0m  [1m[35mCREATE DATABASE "playlist_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5503144799539476285)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlaylistIds (20200506012614)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "playlist_ids" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200506012614"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSongIds (20200506012857)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "song_ids" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200506012857"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-06 01:29:29.284995"], ["updated_at", "2020-05-06 01:29:29.284995"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5503144799539476285)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylistId Create (2.5ms)[0m  [1m[32mINSERT INTO "playlist_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "80's"], ["created_at", "2020-05-06 01:55:04.419195"], ["updated_at", "2020-05-06 01:55:04.419195"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylistId Create (0.3ms)[0m  [1m[32mINSERT INTO "playlist_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "90's"], ["created_at", "2020-05-06 01:55:04.425721"], ["updated_at", "2020-05-06 01:55:04.425721"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylistId Create (0.2ms)[0m  [1m[32mINSERT INTO "playlist_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Soft Rock"], ["created_at", "2020-05-06 01:55:04.428900"], ["updated_at", "2020-05-06 01:55:04.428900"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlaylistId Create (0.2ms)[0m  [1m[32mINSERT INTO "playlist_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Metal"], ["created_at", "2020-05-06 01:55:04.431646"], ["updated_at", "2020-05-06 01:55:04.431646"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (1.4ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_1"], ["created_at", "2020-05-06 01:55:04.441930"], ["updated_at", "2020-05-06 01:55:04.441930"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.3ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_2"], ["created_at", "2020-05-06 01:55:04.446316"], ["updated_at", "2020-05-06 01:55:04.446316"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_3"], ["created_at", "2020-05-06 01:55:04.448960"], ["updated_at", "2020-05-06 01:55:04.448960"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_4"], ["created_at", "2020-05-06 01:55:04.451821"], ["updated_at", "2020-05-06 01:55:04.451821"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_5"], ["created_at", "2020-05-06 01:55:04.454796"], ["updated_at", "2020-05-06 01:55:04.454796"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_6"], ["created_at", "2020-05-06 01:55:04.457448"], ["updated_at", "2020-05-06 01:55:04.457448"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.3ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_7"], ["created_at", "2020-05-06 01:55:04.460239"], ["updated_at", "2020-05-06 01:55:04.460239"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_8"], ["created_at", "2020-05-06 01:55:04.462963"], ["updated_at", "2020-05-06 01:55:04.462963"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_9"], ["created_at", "2020-05-06 01:55:04.465710"], ["updated_at", "2020-05-06 01:55:04.465710"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.4ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_10"], ["created_at", "2020-05-06 01:55:04.468597"], ["updated_at", "2020-05-06 01:55:04.468597"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.3ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_11"], ["created_at", "2020-05-06 01:55:04.471741"], ["updated_at", "2020-05-06 01:55:04.471741"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.3ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_12"], ["created_at", "2020-05-06 01:55:04.474714"], ["updated_at", "2020-05-06 01:55:04.474714"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_13"], ["created_at", "2020-05-06 01:55:04.477578"], ["updated_at", "2020-05-06 01:55:04.477578"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_14"], ["created_at", "2020-05-06 01:55:04.480260"], ["updated_at", "2020-05-06 01:55:04.480260"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.3ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_15"], ["created_at", "2020-05-06 01:55:04.492175"], ["updated_at", "2020-05-06 01:55:04.492175"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_16"], ["created_at", "2020-05-06 01:55:04.495410"], ["updated_at", "2020-05-06 01:55:04.495410"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.2ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_17"], ["created_at", "2020-05-06 01:55:04.498193"], ["updated_at", "2020-05-06 01:55:04.498193"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSongId Create (0.3ms)[0m  [1m[32mINSERT INTO "song_ids" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "song_18"], ["created_at", "2020-05-06 01:55:04.500931"], ["updated_at", "2020-05-06 01:55:04.500931"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m

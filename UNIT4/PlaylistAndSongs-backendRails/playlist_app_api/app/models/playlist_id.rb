@@ -1,0 +1,2 @@
+class PlaylistId < ApplicationRecord
+end
